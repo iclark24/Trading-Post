@@ -1,0 +1,6 @@
+<h1><%= @stall.name %> - <%= @item.name %></h1>
+<p><%= @item.value%> Gold </p>
+<p><%= @item.description %></p>
+<%= link_to 'Edit Item', edit_stall_item_path([@stall, @item]) %>
+<%= link_to 'Delete Item', [@stall, @item], method: :delete %>
+<%= link_to 'Back To Items', stall_items_path(@stall) %>

@@ -1,0 +1,9 @@
+<h1><%= @stall.id ? 'Edit Stall' : 'Create Stall' %></h1>
+<hr />
+<%= form_for @stall do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name, required: true, autofocus: true, placeholder: "Name"%></p>
+  <p><%= f.label :description %></p>
+  <p><%= f.text_area :description, required: true, placeholder: "Description"%></p>
+  <p><%= f.submit %></p>
+<% end %>

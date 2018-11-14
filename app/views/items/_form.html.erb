@@ -1,0 +1,11 @@
+<h1><%= @item.id ? 'Edit Item' : 'Create Item' %></h1>
+<hr />
+<%= form_for [@stall, @item] do |f| %>
+  <p><%= f.label :name %></p>
+  <p><%= f.text_field :name, required: true, autofocus: true, placeholder: "Name"%></p>
+  <p><%= f.label :description %></p>
+  <p><%= f.text_area :description, required: true, placeholder: "Description"%></p>
+  <p><%= f.label :value %></p>
+  <p><%= f.number_field :value, required: true, placeholder: 0%></p>
+  <p><%= f.submit %></p>
+<% end %>

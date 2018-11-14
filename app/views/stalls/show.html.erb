@@ -1,0 +1,9 @@
+<h1><%= @stall.name %></h1>
+<h2><%= @stall.description %></h2>
+<hr />
+<p>What would you like to do?</p>
+<%= link_to 'View Items', stall_items_path(@stall) %>
+<br />
+<%= link_to 'Edit Stall', edit_stall_path(@stall) %>
+<br />
+<%= link_to 'Delete Stall', @stall, method: :delete %>

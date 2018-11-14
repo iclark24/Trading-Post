@@ -1,0 +1,9 @@
+<h1>Click An Item For More Details</h1>
+  <%= link_to 'Create New Item', new_stall_item_path(@stall) %>
+<ul>
+  <% @items.each do |item| %>
+    <li>
+      <%= link_to item.name, [@stall, item] %>
+    </li>
+  <%end%>
+</ul>

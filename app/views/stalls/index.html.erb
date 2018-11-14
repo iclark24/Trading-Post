@@ -1,0 +1,7 @@
+<h1>Click A Stall To View Whats For Sale</h1>
+<%= link_to 'Create a new Stall', new_stall_path %>
+<ul>
+  <% @stalls.each do |stall| %>
+    <li><%= link_to stall.name, stall %></li>
+  <% end %>
+</ul>
