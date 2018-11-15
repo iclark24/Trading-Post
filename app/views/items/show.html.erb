@@ -4,3 +4,14 @@
 <%= link_to 'Edit Item', edit_stall_item_path([@stall, @item]) %>
 <%= link_to 'Delete Item', [@stall, @item], method: :delete %>
 <%= link_to 'Back To Items', stall_items_path(@stall) %>
+<ul>
+<%= link_to 'New Comment', new_item_comment_path([@item])%>
+  <% @item.comments.each do |comment| %>
+  <hr />
+    <li>
+        <p><%= comment.author %></p>
+        <p><%= comment.body %></p>
+
+    </li>
+  <% end %>
+</ul>
